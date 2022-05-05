@@ -8,3 +8,12 @@ This bot uses the Botkit framework, a well-tested framework and very popular acr
 
 
 This project is based on the DevNet [botkit-template](https://www.github.com/CiscoDevNet/botkit-template).
+
+
+
+
+
+How to use it?
+
+
+Talk to the bot at helpdevbot@webex.bot in Webex!
