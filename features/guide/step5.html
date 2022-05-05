@@ -1,0 +1,39 @@
+<blockquote class="info"><h1>Step 5: Understanding how it works</h1></blockquote>
+
+   
+<h3>The Bot can hear you!!</h3>
+
+Say Hi to the bot. Did you see what happened?
+
+
+<h3>Ok, but how it works?</h3>
+
+
+
+Botkit has a special event handler called hears() that makes it easy to configure your bot to listen for this type of trigger.
+Each call to controller.hears() sets up a separate set of patterns to listen for. Developers may specify a single pattern to match, or an array of patterns. By default, Botkit treats these patterns as regular expressions to be evaluated against the message.text field in incoming messages.
+
+Let's take a look at one of the examples:
+
+                   controller.hears( [ 'hi','hello','howdy','hey','aloha','hola','bonjour','oi','hola','buenos dias','buenas tardes','buenas','alo' ], 'message,direct_message', async ( bot,message ) => {
+
+That's the line of code from the "Hello Template", which is one of the features. The controller hears "hi or Hello", then responds as a message with the call bot.reply in this next line:
+
+                   await bot.reply( message, `Hello there!: Im ${ controller.adapter.identity.displayName }` );
+
+In addition to the array of patterns, hears() also receives as an argument one or more event types. Only events of the type listed will be evaluated.
+It is important to note that Botkit will stop processing handlers when the first hears() trigger is matched. 
+
+that's it!, you can modify this example/template, make the bot hear and answer whatever you want.
+
+
+Do you want to see the examples? Ask for <blockquote class="info"><h3>help</h3></blockquote>
+
+
+
+
+
+
+
+
+
