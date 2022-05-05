@@ -1,0 +1,68 @@
+<blockquote class="info"><h1>Securing our bot</h1></blockquote>
+
+As we know security is very important and in this document we will talk about some ways to make your bot more secure.
+
+<blockquote class="success"><h3>Websockets vs Webhooks</h3></blockquote>
+
+Why this template uses websockets and not webhooks?
+For practical reasons, To run this bot we would need a service like NGROK, which basically what it does is make available a public Internet-facing URL of the folder where you have the bot on your server/pc. Or hire a hosting service.
+It can be practical while you are developing the bot, but what happens when we have to upload it to a server in our company?
+the situation becomes more complex and more difficult to work the security environment.
+Also if you are behind a Firewall maybe you have to work around that too.
+
+<blockquote class="danger"><h3>Making my bot private</h3></blockquote>
+
+With this template you will be able to decide if you want to have this bot restricted to external users or if just a couple of users will be able to access it.
+For this case we are going to use middleware, which is already added in the bot.js code in the bot root folder.
+let's take a look:
+
+<h3>bot.js</h3>
+
+    // In this example we are only allowing access to two users by email.
+
+     controller.middleware.ingest.use(async (bot, message, next) => {
+     if (message.type === 'self_message' || message.type === 'attachmentActions' || message.type === 'messages.deleted') {
+      next();
+      return;
+    }
+
+     const { PERMITTED_EMAIL1 } = process.env;
+     const { PERMITTED_EMAIL2 } = process.env;
+     const emailDomain = message.personEmail;
+
+     if (emailDomain === PERMITTED_EMAIL1  || emailDomain === PERMITTED_EMAIL2){
+     next(); 
+     return;
+     }
+
+      console.log('MESSAGE FROM EXTERNAL USER');
+      message.type = 'external_user_message'; 
+
+    next();
+    });
+
+     //Returns an access denied
+     controller.on('external_user_message', async (bot, message) => {
+     const text = 'I am sorry, you do not have access to this resource or you performed an illegal action';
+     await bot.reply(message, text);
+    });
+
+Remember that the emails must be indicated in the .env file, you can also play with this option and allow only domains
+
+<h3>.ENV</h3>
+
+    PERMITTED_EMAIL1=
+
+    PERMITTED_EMAIL1=
+
+
+Do you want to see the examples? Ask for <blockquote class="info"><h3>help</h3></blockquote>
+
+
+
+
+
+
+
+
+
