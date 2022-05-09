@@ -1,6 +1,6 @@
 # botkit-webex-devhelpbot
 
-![](assets/logo4git.png)
+![](assets/images/logo4git.png)
 
 The purpose of this bot is to provide help in developing your first conversational bot in Webex. 
 Among its functions the bot can show you the code of each example, provide you guides and the necessary steps to build the bot that best suits your needs.
