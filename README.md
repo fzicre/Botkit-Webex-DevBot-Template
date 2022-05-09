@@ -38,13 +38,13 @@ In the CMD:
   ```
  Then, locate the .env file, and fill this 3 things:
  
-    ```sh
+  
     WEBEX_ACCESS_TOKEN=
 
     WEBSOCKET_EVENTS=True
 
     PORT=3000
-    ```
+    
   Note: The Webex Access Token can be created in the Webex Developer Portal at: https://developer.webex.com/my-apps (Create New App, then select a bot and complete all the fields. The Webex Access Token for that bot will be revealed there.
   
 Final step, run the bot:
