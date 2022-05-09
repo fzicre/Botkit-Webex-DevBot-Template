@@ -15,14 +15,14 @@ This project is based on the DevNet [botkit-template](https://www.github.com/Cis
 
 
 
-##How to use it?
+## How to use it?
 
 
 Talk to the bot at `helpdevbot@webex.bot` in `Webex`!
 
 
 
-##Or you can follow this mini-guide( remember: full guide, with gifs, videos, etc at `helpdevbot@webex.bot` in `Webex` ):
+## Or you can follow this mini-guide( remember: full guide, with gifs, videos, etc at `helpdevbot@webex.bot` in `Webex` ):
 
 You will need 3 things for this to work: Git, Node.Js and a Webex Account:
 
