@@ -38,7 +38,8 @@ In the CMD:
   ```
  Then, locate the .env file, and fill this 3 things:
  
-    ```sh
+    ```
+    
     WEBEX_ACCESS_TOKEN=
 
     WEBSOCKET_EVENTS=True
