@@ -1,4 +1,4 @@
-# botkit-webex-devhelpbot
+# Botkit-Webex-DevBot-Template 
 
 ![](assets/images/logo4gitS.png)
 
