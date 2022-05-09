@@ -13,7 +13,41 @@ This project is based on the DevNet [botkit-template](https://www.github.com/Cis
 
 
 
-How to use it?
+##How to use it?
 
 
-Talk to the bot at helpdevbot@webex.bot in Webex!
+Talk to the bot at `helpdevbot@webex.bot` in `Webex`!
+
+
+
+##Or you can follow this mini-guide( remember: full guide, with gifs, videos, etc at `helpdevbot@webex.bot` in `Webex` ):
+
+You will need 3 things for this to work: Git, Node.Js and a Webex Account:
+
+In the CMD:
+  ```sh
+    git clone https://github.com/fzicre/Botkit-Webex-DevBot-Template.git
+
+    cd Botkit-Webex-DevBot-Template
+    
+    npm install
+    ```
+ Then, locate the .env file, and fill this 3 things:
+ 
+    ```sh
+    WEBEX_ACCESS_TOKEN=
+
+    WEBSOCKET_EVENTS=True
+
+    PORT=3000
+    
+    ```
+  Note: The Webex Access Token can be created in the Webex Developer Portal at: https://developer.webex.com/my-apps (Create New App, then select a bot and complete all the fields. The Webex Access Token for that bot will be revealed there.
+  
+Final step, run the bot:
+
+```sh
+    cd Botkit-Webex-DevBot-Template
+    
+    npm start
+    ```
