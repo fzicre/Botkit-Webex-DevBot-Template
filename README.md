@@ -22,7 +22,9 @@ Talk to the bot at `helpdevbot@webex.bot` in `Webex`!
 
 
 
-## Or you can follow this mini-guide( remember: full guide, with gifs, videos, etc at `helpdevbot@webex.bot` in `Webex` ):
+## Or you can follow this mini-guide:
+
+(remember, a full guide, with gifs, videos, etc at `helpdevbot@webex.bot` in `Webex` ):
 
 You will need 3 things for this to work: Git, Node.Js and a Webex Account:
 
